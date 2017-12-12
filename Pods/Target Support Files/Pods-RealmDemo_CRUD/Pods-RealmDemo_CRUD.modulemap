@@ -1,0 +1,6 @@
+framework module Pods_RealmDemo_CRUD {
+  umbrella header "Pods-RealmDemo_CRUD-umbrella.h"
+
+  export *
+  module * { export * }
+}
