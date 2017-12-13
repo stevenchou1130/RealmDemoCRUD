@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		353947BA32BBCF608E8A54AA /* Pods_RealmDemo_CRUDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D82A3D4654CF8C8DDA25FD /* Pods_RealmDemo_CRUDTests.framework */; };
 		42B9C29B83C16DD2FAE04375 /* Pods_RealmDemo_CRUDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F541C9688B3E67C234FC6A98 /* Pods_RealmDemo_CRUDUITests.framework */; };
+		DB1825191FE0C6CB004B3364 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1825181FE0C6CA004B3364 /* RealmManager.swift */; };
+		DB18251B1FE0D575004B3364 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18251A1FE0D575004B3364 /* Order.swift */; };
+		DB18251D1FE0F8F3004B3364 /* Date_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18251C1FE0F8F3004B3364 /* Date_Ext.swift */; };
 		DBB105D81FDF719A00DB4BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB105D71FDF719A00DB4BA0 /* AppDelegate.swift */; };
 		DBB105DF1FDF719A00DB4BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB105DE1FDF719A00DB4BA0 /* Assets.xcassets */; };
 		DBB105E21FDF719A00DB4BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB105E01FDF719A00DB4BA0 /* LaunchScreen.storyboard */; };
@@ -44,6 +47,9 @@
 		7BBA1A3D45BAB5DD86795A8B /* Pods-RealmDemo_CRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDemo_CRUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDemo_CRUD/Pods-RealmDemo_CRUD.release.xcconfig"; sourceTree = "<group>"; };
 		89F8907DF55965CD793E7EDD /* Pods_RealmDemo_CRUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmDemo_CRUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D908A919C6C7ABD3052AF840 /* Pods-RealmDemo_CRUDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDemo_CRUDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDemo_CRUDTests/Pods-RealmDemo_CRUDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB1825181FE0C6CA004B3364 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		DB18251A1FE0D575004B3364 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		DB18251C1FE0F8F3004B3364 /* Date_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_Ext.swift; sourceTree = "<group>"; };
 		DBB105D41FDF719A00DB4BA0 /* RealmDemo_CRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmDemo_CRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB105D71FDF719A00DB4BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB105DE1FDF719A00DB4BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 			children = (
 				DBB105D71FDF719A00DB4BA0 /* AppDelegate.swift */,
 				DBB106071FDF71F300DB4BA0 /* MainPageViewController.swift */,
+				DB1825181FE0C6CA004B3364 /* RealmManager.swift */,
+				DB18251A1FE0D575004B3364 /* Order.swift */,
+				DB18251C1FE0F8F3004B3364 /* Date_Ext.swift */,
 				DBB106051FDF71DF00DB4BA0 /* MainPage.storyboard */,
 				DBB105DE1FDF719A00DB4BA0 /* Assets.xcassets */,
 				DBB105E01FDF719A00DB4BA0 /* LaunchScreen.storyboard */,
@@ -347,9 +356,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RealmDemo_CRUD/Pods-RealmDemo_CRUD-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -470,6 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB18251D1FE0F8F3004B3364 /* Date_Ext.swift in Sources */,
+				DB1825191FE0C6CB004B3364 /* RealmManager.swift in Sources */,
+				DB18251B1FE0D575004B3364 /* Order.swift in Sources */,
 				DBB106081FDF71F300DB4BA0 /* MainPageViewController.swift in Sources */,
 				DBB105D81FDF719A00DB4BA0 /* AppDelegate.swift in Sources */,
 			);

@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainPageViewController: UIViewController {
 
+    @IBOutlet weak var textfield: UITextField!
+    let realmManager = RealmManager.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func addOrder(_ sender: Any) {
+        let newOrder = realmManager.createOrder(with: textfield.text!)
+        realmManager.saveToRealm(with: newOrder)
+        textfield.text = ""
+    }
+
+    @IBAction func getDataFromRealm(_ sender: Any) {
+        realmManager.getDataFromRealm()
     }
 }

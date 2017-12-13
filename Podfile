@@ -7,6 +7,7 @@ target 'RealmDemo_CRUD' do
 
   # Pods for RealmDemo_CRUD
   pod 'SwiftLint'
+  pod 'RealmSwift'
   
   target 'RealmDemo_CRUDTests' do
     inherit! :search_paths
